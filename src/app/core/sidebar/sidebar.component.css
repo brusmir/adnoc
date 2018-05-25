@@ -1,0 +1,19 @@
+.icon-width {
+    width: 20px;
+}
+.sidebar-background {
+    background-color: #eff0f2;
+}
+nav {
+    min-height: 100vh;  
+    /* border-right: 1px solid black;   */
+}
+header {
+    background-color: #d6d6d8;
+    height: 56px;
+    /* border-right: 1px solid black; */
+}
+
+.siderbar-border {
+    border-right: 1px solid black;
+}

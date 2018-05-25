@@ -1,0 +1,68 @@
+<div class="row pad-top mt-5">
+  <div class="col-md-8 offset-md-2">
+    <h3>NEW/UPDATE</h3>
+  </div>
+</div>
+<div class="row pad-top mt-2">
+  <div class="col-md-8 offset-md-2">
+      <form [formGroup]="dataForm">
+        <div class="form-group">
+          <label for="">Product</label>
+          <input type="text" name="product" formControlName="product" class="form-control">
+          <div class="col-sm-4" *ngIf="dataForm.controls.product.touched">
+            <div *ngIf="dataForm.controls.product.errors?.required" class="text-danger">This field is required.</div>
+         </div>
+        </div>
+        <div class="form-group">
+          <label for="">Month</label>
+          <input type="text" name="month" formControlName="month" class="form-control">
+          <div class="col-sm-4" *ngIf="dataForm.controls.month.touched">
+            <div *ngIf="dataForm.controls.month.errors?.required" class="text-danger">This field is required.</div>
+         </div>
+        </div>
+        <div class="form-group">
+          <label for="">Allocation</label>
+          <input type="text" name="allocation" formControlName="allocation" class="form-control">
+          <div class="col-sm-4" *ngIf="dataForm.controls.allocation.touched">
+            <div *ngIf="dataForm.controls.allocation.errors?.required" class="text-danger">This field is required.</div>
+         </div>
+        </div>
+        <div class="form-group">
+          <label for="">Nomination</label>
+          <input name="nomination" id="" formControlName="nomination" class="form-control">
+          <div class="col-sm-4" *ngIf="dataForm.controls.nomination.touched">
+            <div *ngIf="dataForm.controls.nomination.errors?.required" class="text-danger">This field is required.</div>
+         </div>
+        </div>
+        <div class="form-group">
+          <label for="">Actual</label>
+          <input name="actual" id="" formControlName="actual" class="form-control">
+          <div class="col-sm-4" *ngIf="dataForm.controls.actual.touched">
+            <div *ngIf="dataForm.controls.actual.errors?.required" class="text-danger">This field is required.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Company</label>
+          <input name="company" id="" formControlName="company" class="form-control">
+          <div class="col-sm-4" *ngIf="dataForm.controls.company.touched">
+            <div *ngIf="dataForm.controls.company.errors?.required" class="text-danger">This field is required.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Port</label>
+          <input name="port" id="" formControlName="port" class="form-control">
+          <div class="col-sm-4" *ngIf="dataForm.controls.port.touched">
+            <div *ngIf="dataForm.controls.port.errors?.required" class="text-danger">This field is required.</div>
+         </div>
+        </div>       
+        <div class="form-group">
+          <label for="">Status</label>
+          <input name="status" id="" formControlName="status" class="form-control">
+          <div class="col-sm-4" *ngIf="dataForm.controls.status.touched">
+            <div *ngIf="dataForm.controls.status.errors?.required" class="text-danger">This field is required.</div>
+         </div>
+        </div>
+        <button type="submit" class="btn btn-primary float-right" (click)="submit()" [disabled]="dataForm.invalid">Submit</button>
+      </form>
+  </div>
+</div>

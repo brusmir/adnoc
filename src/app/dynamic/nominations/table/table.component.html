@@ -1,0 +1,33 @@
+<span class="text-success mx-5">Filtered by: Allocation</span> <span class="text-success">ITEMS ({{count}})</span>
+<table class="table mt-3 text-center">
+  <thead class="table-active">
+    <tr>
+      <th><i class="fa fa-angle-right"></i></th>
+      <th>ID</th>
+      <th>Product</th>
+      <th>Month</th>
+      <th>Allocation</th>
+      <th>Actual</th>
+      <th>Company</th>
+      <th>Port</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of data">
+      <td><a [routerLink]="['/nominations/', d?.id]"><i class="fa fa-angle-right text-success"></i></a></td>
+      <td>{{d?.id}}</td>
+      <td class="{{d?.product}}">{{d?.product}}</td>
+      <td>{{d?.month}}</td>
+      <td>{{d?.allocation}}</td>
+      <td>{{d?.actual}}</td>
+      <td>
+        <select name="" id="" >
+          <option value="">{{d?.company}}</option>
+        </select>
+      </td>
+      <td>{{d?.port}}</td>
+      <td class="{{d?.status}}">{{d?.status}}</td>
+    </tr>    
+  </tbody>
+</table>
